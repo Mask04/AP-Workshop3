@@ -8,7 +8,10 @@ public class Contact {
     public Contact(String group , String email , String firstName , String lastName , String countryCode , String number,
                    String zipCode , String country , String city){
         this.group = group;
-        this.email = email;
+        if (!email.equals(" "))
+            this.email = email;
+        else
+            this.email = "-";
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = new PhoneNumber(countryCode , number);
