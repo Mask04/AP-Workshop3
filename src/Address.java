@@ -9,7 +9,7 @@ public class Address
         this.city = city;
     }
 
-    public String ToString(){
+    public String toString(){
         return "zipCode:" + zipCode + "\ncountry:"+ country + "\ncity:" + city;
     }
 
