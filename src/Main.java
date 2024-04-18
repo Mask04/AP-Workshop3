@@ -61,7 +61,11 @@ public class Main {
             }
             else if (str2[0].equals("show-c")){
                 Contact contact = myPhoneBook.findContact(str2[1] , str2[2]);
-                contact.print();
+                if (contact == null) {
+                    System.out.println("not-found");
+                }
+                else
+                    contact.print();
             }
             else if (str2[0].equals("show")){
                 myPhoneBook.printContacts();
