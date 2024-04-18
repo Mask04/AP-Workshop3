@@ -52,6 +52,9 @@ public class PhoneBook {
     }
 
     public void printContacts(){
+        if (contacts.size() == 0){
+            System.out.println("empty list");
+        }
         for (Contact contact : contacts) {
             contact.print();
         }
