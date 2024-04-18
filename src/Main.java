@@ -25,13 +25,18 @@ public class Main {
                 countryCode = scan.nextLine();
                 System.out.println("please enter contact's phoneNumber");
                 phoneNumber = scan.nextLine();
+                while(phoneNumber.length() != 10){
+                    System.out.println("invalid number");
+                    System.out.println("please enter contact's phoneNumber");
+                    phoneNumber = scan.nextLine();
+                }
                 System.out.println("please enter contact's zipCode");
                 zipCode = scan.nextLine();
                 System.out.println("please enter contact's country");
                 country = scan.nextLine();
                 System.out.println("please enter contact's city");
                 city = scan.nextLine();
-                Contact contact = new Contact(group , email,str2[1] , str2[2], countryCode, phoneNumber
+                Contact contact = new Contact(group , email, str2[1] , str2[2], countryCode, phoneNumber
                         , zipCode , country , city);
 
                 if(myPhoneBook.addContact(contact))

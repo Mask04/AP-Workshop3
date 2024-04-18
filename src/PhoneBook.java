@@ -41,10 +41,14 @@ public class PhoneBook {
         for (Contact contact : contacts){
             if (contact.getGroup().equals(group)) {
                 sameGroup.add(contact);
-                return sameGroup;
             }
         }
-        return null;
+        if(contacts.size() == 0){
+            return  null;
+        }
+        else
+            return sameGroup;
+
     }
 
     public void printContacts(){
