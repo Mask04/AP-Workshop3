@@ -52,6 +52,9 @@ public class Main {
             }
             else if (str2[0].equals("show-g")){
                 ArrayList <Contact> sameGroup = myPhoneBook.findContacts(str2[1]);
+                if (sameGroup.size() == 0){
+                    System.out.println("not-found");
+                }
                 for (Contact contact : sameGroup) {
                     contact.print();
                 }
